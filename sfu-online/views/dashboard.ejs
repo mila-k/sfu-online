@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset ="UTF-8"/>
+        <meta name ="viewport" content= "width=device=width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Document</title>
+    </head>
+
+    <body>
+
+      <header>
+        <div>
+          <h4>SFU Online</h4>
+          <nav>
+            <ul>
+              <li><a href="/users/logout">Logout</a></li>
+              <li><a href="/users/message">Messaging</a></li>
+              <li><a href="/room">Video Room</a></li>
+              <li><a href="/users/channel">Group Channel</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+        <head>
+            <style>
+            .myDivision{
+              width:1000px;
+              border: 10px outset rgb(255, 255, 255);
+              background-color : #79a2b3;
+              text-align:start;
+            }
+
+            .myDivision input{
+                width:100%;
+                clear: both;
+            }
+
+
+            .division {
+              margin-top: 120px;
+            }
+
+            body {
+              margin: 0px;
+            }
+
+            .container {
+              width: 80%;
+              margin: 0 auto;
+            }
+
+            header {
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+              background: #444444;
+            }
+
+            h4 {
+              margin-left: 30px;
+              margin-top: 20px;
+              margin-bottom: 20px;
+              display: flex;
+              float: left;
+            }
+
+            nav {
+              margin-right: 30px;
+              /* margin-top: 20px; */
+              margin-bottom: 20px;
+              float: right;
+            }
+
+            nav ul {
+              margin: 0;
+              padding: 0;
+              list-style: none;
+            }
+
+            nav li {
+              display: inline-block;
+              margin-left: 50px;
+              padding-top: 20px;
+              position: relative;
+            }
+
+            nav ul > li > a {
+              color: #9a9999;
+              text-decoration: none;
+            }
+
+            nav a:hover {
+              color: #fff;
+              text-decoration: none;
+            }
+
+            nav a::before {
+              content: '';
+              display: block;
+              height: 2px;
+              background-color: #fff;
+              position: absolute;
+              top: 0;
+              width: 0%;
+              transition: all ease-in-out 150ms;
+            }
+
+            nav a:hover::before {
+              width: 100%;
+            }
+
+            </style>
+
+        <!-- <h1> Welcome </h1> -->
+        <div class="division">
+          <h2>Welcome to SFUO</h2>
+        </div>
+
+        <div class= "myDivision">
+            <h2>
+                Customize Your Personal Profile
+            </h2>
+            <h5>
+                Please fill in the following fields below
+            </h5>
+        </div>
+        <div class ="myDivision">
+
+        <form action= "/users/dashboard" method ="POST">
+        <div>
+            <input type ="text" id="firstname" name="firstname" placeholder="Firstname" required>
+        </div>
+
+
+        <div>
+            <input type ="text" id="lastname" name="lastname" placeholder="Lastname" required>
+        </div>
+
+        <div>
+            <input type ="text" id="username" name="username" placeholder="Username" required>
+        </div>
+
+        <div>
+            <input type ="text" id="biography" name="biography" placeholder="Biography" required>
+        </div>
+        <div>
+            <input type ="number" id="year" name="year" placeholder="Year" required>
+        </div>
+
+        <div>
+            <input type ="text" id="courses" name="courses" placeholder="Courses" required>
+        </div>
+
+        <div>
+            <input type="submit" value ="update"/>
+        </div>
+        </div>
+
+        </form>
+    </body>
+</html>
